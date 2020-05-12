@@ -1,13 +1,21 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  # background-image: url("https://wprosdocimo.com.br/images/background-img.jpg");
+  background-image: url("../img/fundo.jpg");
   background-size: auto 100vh;
   font-family: Arial;
+  font-size: 10px;
   height: 100vh;
 }
 
-body::after {
+/* body::after {
   content: "";
-  background: url("https://wprosdocimo.com.br/images/background-img.jpg");
+  background: url("../img/fundo.jpg");
   opacity: 0.8;
   top: 0;
   left: 0;
@@ -15,10 +23,33 @@ body::after {
   right: 0;
   position: absolute;
   z-index: -1;   
+} */
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
@@ -28,6 +59,12 @@ body::after {
 
 .menu li {
   list-style: none;
+}
+
+.menu a {
+  display: block;
+  /* background-color: aqua; */
+  padding: 10px;
 }
 
 a {
@@ -47,4 +84,9 @@ a:hover {
 
 .site-subtitle {
   font-style: italic;
+}
+
+.img-portfolio {
+  width: 180px;
+  height: 180px;
 }
