@@ -11,7 +11,7 @@ body {
   background-attachment: fixed;
   background-position: bottom;
   font-family: Arial;
-  font-size: 10px;
+  font-size: 12px;
   height: 100vh;
 }
 
@@ -56,13 +56,13 @@ header {
 
 @media (min-width: 400px) {
   header {
-    height: 60vh;
+    height: 80vh;
   }
 }
 
 @media (min-width: 600px) {
   header {
-    height: 40vh;
+    height: 60vh;
   }
 }
 
@@ -101,6 +101,14 @@ a:hover {
 .site-title {
   color: whitesmoke;
   text-align: center;
+}
+
+.site-title img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid;
 }
 
 .site-subtitle {
