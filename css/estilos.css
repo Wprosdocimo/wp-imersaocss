@@ -83,33 +83,20 @@ header {
     left: 15px;
     z-index: 1;
     user-select: none;
-    /*! background: white; */
   }
  
   #menuToggle span {
     display: block;
     width: 32px;
     height: 4px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    position: relative;
+    left: 0;
+    position: absolute;
     background: whitesmoke;
-    border-radius: 3px;
+    border-radius: 9px;
     z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
-  }
-  
-  #menuToggle span:first-child
-  {
-    transform-origin: 0% 0%;
-  }
-  
-  #menuToggle span:nth-last-child(2)
-  {
-    transform-origin: 0% 100%;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    opacity: 1;
   }
   
   #menuToggle input {
@@ -124,18 +111,38 @@ header {
     z-index: 2;
   }
   
+  #menuToggle input ~ span:nth-child(2) {
+    top: 8px;
+    transform-origin: left center;
+  }
+  #menuToggle input ~ span:nth-child(3) {
+    top: 15px;
+    transform-origin: left center;
+  }
+  #menuToggle input ~ span:nth-child(4) {
+    top: 22px;
+    transform-origin: left center;
+  }
+  
   #menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(10%, -100%);
-    background: #232323;
+    background: teal;
+  }
+  
+  #menuToggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg);
+    top: 3px;
+    left: 5px;
   }
 
-  #menuToggle input:checked ~ span:nth-last-child(3) {
+  #menuToggle input:checked ~ span:nth-child(3) {
     opacity: 0;
+    width: 0px;
   }
 
-  #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(10%, 100%);
+  #menuToggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg);
+    top: 26px;
+    left: 5px;
   }
 
   .menu ul {
@@ -145,7 +152,6 @@ header {
     flex-direction: column;
     font-size: 22px;
     padding: 3em 2em 2em 2em;
-    /*! padding-top: 6em; */
     background-color: white;
     margin: -50px 0px 0px -15px;
   }
