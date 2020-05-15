@@ -14,50 +14,78 @@
 
 <body>
   <header>
-    <nav class="menu">
+    <nav class="menu container">
       <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="#"><i class="fas fa-home"></i></a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
     </nav>
     <div>
-      <figure class="site-title">
-        <img src="./img/foto.png" alt="foto Wilson Prosdocimo">
-      </figure>
+      
       <h1 class="site-title">Wilson Prosdocimo</h1>
       <h2 class="site-subtitle">Infraestrutura | Nuvem | DevOPS</h2>
     </div>
   </header>
-  <section id="portfolio" class="portfolio">
+  <section id="sobre" class="sobre container">
+    <h2>Sobre</h2>
+    <figure class="avatar">
+      <img src="./img/foto.png" alt="foto Wilson Prosdocimo">
+    </figure>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora sit animi culpa officiis deserunt ducimus minus ipsa. Asperiores, natus laboriosam facilis dicta ut rem sint esse architecto illum eos debitis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam obcaecati officia inventore voluptatem quaerat vitae, deleniti et expedita ad velit veniam optio enim, aspernatur ab maiores quos perferendis, mollitia praesentium.</p>
+
+  <p>Este site foi feito durante a Imersão CSS</p>
+  </section>
+  <section id="portfolio" class="portfolio container">
     <h2>Em estudo:</h2>
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-        <figcaption>Android</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-        <figcaption>Python</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-        <figcaption>Infra as Code</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
-        <figcaption>Nuvens</figcaption>
-      </figure>
-
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+            <figcaption>Android</figcaption>
+          </figure>
+          <div class="card-back">Oi eu dou a parte de traz...</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt="Mobile">
+            <figcaption>Python</figcaption>
+          </figure>
+          <div class="card-back">Oi eu dou a parte de traz...</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+            <figcaption>Infra as Code</figcaption>
+          </figure>
+          <div class="card-back">Oi eu dou a parte de traz...</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
+            <figcaption>Nuvens</figcaption>
+          </figure>
+          <div class="card-back">Oi eu dou a parte de traz...</div>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="contato" id="contato">
+  <section class="contato container" id="contato">
     <h2>Contato</h2>
 
     <div class="grid icons">
